@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Jannu ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Put your local song file in this same folder and name it: lady-in-red.mp3 -->
+  <audio id="love-song" preload="auto" loop>
+    <source src="lady-in-red.mp3" type="audio/mpeg">
+  </audio>
+  <button id="music-toggle" class="music-toggle" aria-label="Pause music">♫ <span>Music</span></button>
+  <div id="petal-layer"></div>
+  <div id="heart-layer"></div>
+
+  <!-- PASSWORD GATE -->
+  <section id="gate" class="screen active">
+    <div class="gate-glow"></div>
+    <div class="gate-card">
+      <p class="eyebrow">A little secret, just for you</p>
+      <h1>For my <span>Jannu</span></h1>
+      <p class="gate-copy">
+        There are 24 little hearts here.<br>
+        One belongs to every hour I could spend thinking about you.
+      </p>
+
+      <div id="heart-password" class="heart-password" aria-label="Password hearts"></div>
+
+      <input id="password" type="password" autocomplete="off"
+             placeholder="Enter our little phrase..." aria-label="Secret phrase">
+      <button id="unlock">Open my heart</button>
+      <p id="hint">A phrase only the two of us would understand.</p>
+      <p id="error" class="error"></p>
+    </div>
+  </section>
+
+  <!-- MAIN STORY -->
+  <main id="main" class="hidden">
+    <section class="hero section">
+      <div class="stars"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">For the girl who became my favourite place</p>
+        <h1>Four months.<br><em>And somehow, still not enough.</em></h1>
+        <p class="hero-sub">
+          Some people count months by dates.<br>
+          I count mine by the moments that became memories.
+        </p>
+
+        <div class="curved-counter">
+          <div class="counter-arc"></div>
+          <div class="counter-center">
+            <span id="days">000</span>
+            <small>days since 1 June</small>
+          </div>
+          <div class="counter-label">
+            <span id="hours">00</span>h&nbsp;
+            <span id="minutes">00</span>m&nbsp;
+            <span id="seconds">00</span>s
+          </div>
+        </div>
+
+        <p class="scroll-note">scroll slowly · there is no rush here ↓</p>
+      </div>
+    </section>
+
+    <section class="section memory">
+      <div class="section-inner">
+        <p class="eyebrow">01 · The little things</p>
+        <h2>Four months of <em>us.</em></h2>
+        <div class="divider">♡</div>
+        <p>
+          Four months may sound small when written on a calendar.
+          But with you, they don't feel small at all.
+        </p>
+        <p>
+          They feel like a collection of tiny worlds — the laughs,
+          the teasing, the random conversations, the comfortable silences,
+          and all those ordinary moments that somehow became precious
+          simply because <strong>you were there.</strong>
+        </p>
+      </div>
+    </section>
+
+    <section class="section kulfi">
+      <div class="section-inner">
+        <p class="eyebrow">02 · Our kind of fun</p>
+        <h2>Games, kulfi &amp;<br><em>you laughing beside me.</em></h2>
+        <p>
+          I don't think I will ever forget how much fun we had with our games
+          and those little kulfi moments. It wasn't really about winning.
+          It wasn't even about the game.
+        </p>
+        <p>
+          It was about hearing you laugh, watching your expressions change,
+          annoying you just enough to get that reaction, and realizing that
+          I could be completely myself around you.
+        </p>
+        <p class="signature-line">Those are the moments I want more of.</p>
+      </div>
+    </section>
+
+    <section class="section movie">
+      <div class="film-grain"></div>
+      <div class="section-inner">
+        <p class="eyebrow">03 · A little movie magic</p>
+        <h2><em>Only You</em></h2>
+        <p>
+          We watched <em>Only You</em>, and somewhere between the scenes,
+          the smiles and the movie-night feeling, I kept thinking about us.
+        </p>
+        <blockquote>
+          “Sometimes you don't find the person you're looking for —
+          you find the person who makes you stop looking.”
+        </blockquote>
+        <p class="quote-note">
+          Inspired by the romantic spirit of <em>Only You</em> (1994).
+          Not a direct quotation from the film.
+        </p>
+      </div>
+    </section>
+
+    <section class="section moods">
+      <div class="section-inner">
+        <p class="eyebrow">04 · Every version of you</p>
+        <h2>I love you in<br><em>all your moods.</em></h2>
+        <p>
+          I love the happy you. The quiet you. The excited you.
+          The stubborn you. The overthinking you. The sleepy you.
+          Even the you who has a mood swing and decides the whole universe
+          is personally responsible.
+        </p>
+        <p>
+          I don't want only the easy versions of you.
+          I want the real you — messy, emotional, beautiful, unpredictable,
+          soft, strong and everything in between.
+        </p>
+        <p class="deep-line">
+          Loving someone isn't loving a mood.<br>
+          It's choosing the person through all of them.
+        </p>
+      </div>
+    </section>
+
+    <section class="section letter-section">
+      <div class="letter">
+        <p class="letter-top">To my Jannu,</p>
+        <h2>My fourth-month letter</h2>
+
+        <p>
+          Four months with you.
+        </p>
+        <p>
+          I don't know how something can feel both so new and so familiar
+          at the same time, but that's what you have become to me.
+          You are still the girl who can make my heart race,
+          but you're also becoming the person my heart feels safest with.
+        </p>
+        <p>
+          This fourth month gave me so many little memories I want to keep:
+          the games, the kulfi, the movies, the funny jokes,
+          the conversations that somehow meant everything reasoning as you speak.
+        </p>
+        <p>
+          And if you ever wonder what my favourite part was,
+          it wasn't one particular game or one particular movie.
+          <strong>It was you.</strong>
+        </p>
+        <p>
+          I enjoyed the moments because you were in them.
+          I enjoyed the movies because I was watching them with you.
+          I enjoyed the games because your laughter was somewhere inside them.
+        </p>
+        <p>
+          I love you when you're smiling, and I love you when you're annoyed.
+          I love your softness and your fire. I love your calm days and your
+          complicated ones. I don't need you to be perfect for me.
+          I just want you to be you.
+        </p>
+        <p>
+          If these four months are only the beginning,
+          then I hope we keep collecting these tiny worlds together —
+          one laugh, one argument, one movie, one kulfi,
+          one ridiculous, amazing and beautiful memory at a time.
+        </p>
+        <p class="final-love">
+          You are not just a chapter I enjoyed.<br>
+          You are the part of the story I want to keep writing.
+        </p>
+
+        <p class="letter-end">Always yours,<br>Damon<span>♡</span></p>
+      </div>
+    </section>
+
+    <section class="section ending">
+      <div class="section-inner">
+        <div class="giant-heart">♥</div>
+        <p class="eyebrow">04 · Still choosing you</p>
+        <h2>Happy 4th Month, Jannu.</h2>
+        <p>
+          If I had to start all over again,<br>
+          I would still want to find you.
+        </p>
+        <p class="small-end">And I would still choose you.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

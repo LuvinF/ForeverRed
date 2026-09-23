@@ -1,0 +1,114 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#09060a;--rose:#e9a0ae;--rose2:#ffcad3;--cream:#f8eee9;
+  --muted:#bcaeb2;--line:rgba(255,190,205,.22);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--cream);font-family:"Montserrat",sans-serif;
+  overflow-x:hidden;line-height:1.8;
+}
+body:before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:20;
+  background:radial-gradient(circle at 50% 20%,transparent 20%,rgba(0,0,0,.45) 100%);
+}
+#petal-layer,#heart-layer{position:fixed;inset:0;pointer-events:none;z-index:50;overflow:hidden}
+.screen{min-height:100vh;display:grid;place-items:center;position:relative;overflow:hidden}
+#gate{background:
+ radial-gradient(circle at 50% 48%,rgba(104,22,53,.26),transparent 38%),
+ radial-gradient(circle at 15% 15%,rgba(150,50,80,.10),transparent 28%),
+ #08050a}
+.gate-card{width:min(570px,90vw);text-align:center;padding:42px 28px;position:relative;z-index:2}
+.gate-glow{position:absolute;width:420px;height:420px;border-radius:50%;
+ background:rgba(180,42,89,.09);filter:blur(70px);animation:pulse 3s ease-in-out infinite}
+.eyebrow{text-transform:uppercase;letter-spacing:.3em;font-size:.65rem;color:var(--rose);margin-bottom:20px}
+h1,h2{font-family:"Cormorant Garamond",serif;font-weight:500;line-height:.95}
+#gate h1{font-size:clamp(3.5rem,10vw,6rem);margin-bottom:24px}
+#gate h1 span{font-family:"Great Vibes",cursive;color:var(--rose2)}
+.gate-copy{color:var(--muted);font-size:.85rem;margin-bottom:28px}
+.heart-password{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;max-width:430px;margin:0 auto 26px}
+.password-heart{font-size:18px;color:#ffb8c7;filter:drop-shadow(0 0 8px rgba(255,120,160,.6));
+ animation:heartPulse 1.7s ease-in-out infinite;transition:.5s}
+.password-heart:nth-child(2n){animation-delay:.15s}.password-heart:nth-child(3n){animation-delay:.3s}
+.password-heart.vanish{animation:vanish .7s forwards}
+input{
+ width:min(430px,100%);padding:15px 18px;border:1px solid var(--line);border-radius:40px;
+ background:rgba(255,255,255,.045);color:white;text-align:center;outline:none;font:400 .85rem "Montserrat";
+ transition:.3s
+}
+input:focus{border-color:rgba(255,170,190,.65);box-shadow:0 0 25px rgba(220,70,120,.13)}
+button{
+ display:block;margin:14px auto 10px;padding:13px 28px;border:1px solid rgba(255,190,205,.4);
+ border-radius:40px;background:rgba(175,44,78,.18);color:var(--cream);cursor:pointer;
+ font:500 .72rem "Montserrat";letter-spacing:.12em;text-transform:uppercase;transition:.3s
+}
+button:hover{background:rgba(210,62,104,.32);transform:translateY(-2px)}
+#hint{font-size:.68rem;color:#776a70}.error{height:24px;color:#f08da0;font-size:.72rem}
+.hidden{display:none!important}
+.hero{min-height:100vh;position:relative;background:
+ radial-gradient(circle at 50% 45%,rgba(95,18,49,.28),transparent 32%),
+ radial-gradient(circle at 80% 15%,rgba(180,80,110,.08),transparent 25%),#09060a}
+.stars,.stars:before,.stars:after{position:absolute;inset:0;content:"";background-image:
+ radial-gradient(1px 1px at 10% 20%,#fff,transparent),radial-gradient(1px 1px at 30% 70%,#fff,transparent),
+ radial-gradient(1px 1px at 70% 30%,#fff,transparent),radial-gradient(1px 1px at 90% 80%,#fff,transparent),
+ radial-gradient(1px 1px at 52% 12%,#fff,transparent);opacity:.35}
+.stars:before{transform:scale(1.5);opacity:.18}.stars:after{transform:scale(2);opacity:.1}
+.hero-inner{position:relative;z-index:2;text-align:center;width:min(900px,92vw);margin:auto}
+.hero h1{font-size:clamp(4rem,10vw,8.7rem);letter-spacing:-.03em}
+.hero h1 em{color:var(--rose);font-style:italic}
+.hero-sub{color:var(--muted);margin:30px auto 0;max-width:560px;font-size:.9rem}
+.curved-counter{width:min(500px,85vw);height:270px;margin:55px auto 0;position:relative}
+.counter-arc{position:absolute;inset:5px 5px 15px;border:1px solid var(--line);border-bottom-color:transparent;
+ border-radius:50% 50% 0 0;transform:perspective(300px) rotateX(10deg);box-shadow:0 -10px 50px rgba(220,75,120,.08)}
+.counter-arc:before,.counter-arc:after{content:"";position:absolute;width:5px;height:5px;border-radius:50%;background:var(--rose2);box-shadow:0 0 15px 4px rgba(255,160,190,.6)}
+.counter-arc:before{left:5%;top:25%}.counter-arc:after{right:8%;top:40%}
+.counter-center{position:absolute;left:50%;top:72px;transform:translateX(-50%);display:flex;flex-direction:column}
+.counter-center span{font-family:"Cormorant Garamond";font-size:5rem;line-height:.8;color:var(--rose2)}
+.counter-center small{color:var(--muted);font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;margin-top:15px;white-space:nowrap}
+.counter-label{position:absolute;bottom:10px;width:100%;font-size:.72rem;color:#8e7e84;letter-spacing:.08em}
+.scroll-note{font-size:.62rem;color:#6d5e65;letter-spacing:.2em;text-transform:uppercase;margin-top:35px}
+.section{min-height:100vh;display:grid;place-items:center;padding:100px 22px;position:relative}
+.section-inner{width:min(720px,92vw);text-align:center}
+.section h2{font-size:clamp(3.2rem,7vw,6rem);margin-bottom:35px}
+.section h2 em{color:var(--rose);font-style:italic}
+.section p{color:#c4b6bb;font-size:.92rem;max-width:620px;margin:0 auto 24px}
+.divider{color:var(--rose);font-size:1.4rem;margin:20px}
+strong{color:var(--rose2);font-weight:500}
+.kulfi{background:linear-gradient(180deg,#09060a,#10080d 50%,#09060a)}
+.kulfi .section-inner:before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;
+background:rgba(186,64,102,.08);filter:blur(80px);left:50%;top:50%;transform:translate(-50%,-50%);z-index:-1}
+.signature-line{font-family:"Great Vibes";font-size:2rem!important;color:var(--rose2)!important;margin-top:40px!important}
+.movie{background:radial-gradient(circle at 50% 50%,rgba(74,34,49,.3),transparent 55%),#080608}
+.movie blockquote{font-family:"Cormorant Garamond";font-size:clamp(1.7rem,4vw,2.6rem);font-style:italic;
+line-height:1.2;color:#eadce0;max-width:600px;margin:45px auto 15px}
+.quote-note{font-size:.62rem!important;color:#756970!important}
+.moods{background:linear-gradient(180deg,#09060a,#0d080c,#09060a)}
+.deep-line{font-family:"Cormorant Garamond";font-size:1.55rem!important;color:var(--rose2)!important;margin-top:45px!important}
+.letter-section{padding:120px 18px}
+.letter{width:min(760px,94vw);padding:65px clamp(28px,7vw,75px);background:
+linear-gradient(135deg,rgba(255,245,240,.06),rgba(255,255,255,.025));
+border:1px solid rgba(255,190,205,.16);box-shadow:0 25px 80px rgba(0,0,0,.4);position:relative}
+.letter:before{content:"";position:absolute;inset:12px;border:1px solid rgba(255,190,205,.08);pointer-events:none}
+.letter-top,.letter-end{font-family:"Great Vibes";font-size:2rem!important;color:var(--rose2)!important}
+.letter h2{font-size:clamp(3rem,7vw,5rem);margin:15px 0 45px}
+.letter p{max-width:none;text-align:left;color:#cbbcc1;font-size:.92rem;margin-bottom:23px}
+.letter .final-love{text-align:center;font-family:"Cormorant Garamond";font-size:1.7rem;color:var(--rose2);margin:45px 0}
+.letter-end{text-align:right!important;margin-top:45px!important}
+.letter-end span{font-size:2.5rem}
+.ending{text-align:center;min-height:80vh}
+.giant-heart{font-size:5rem;color:#e8849c;text-shadow:0 0 40px rgba(235,90,125,.35);animation:heartPulse 1.6s infinite}
+.ending h2{font-size:clamp(3rem,8vw,6rem);margin:20px 0}
+.ending .small-end{font-family:"Great Vibes";font-size:2rem;color:var(--rose2)}
+.petal{position:absolute;top:-40px;width:12px;height:18px;background:linear-gradient(120deg,#f6a9b8,#9d304d);
+border-radius:100% 0 100% 0;opacity:.75;filter:blur(.1px);animation:fall linear forwards;box-shadow:0 0 8px rgba(240,110,145,.15)}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(720deg);opacity:.05}}
+@keyframes pulse{50%{transform:scale(1.15);opacity:.7}}
+@keyframes heartPulse{50%{transform:scale(1.22)}}
+@keyframes vanish{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(2.2) translateY(-20px);filter:blur(6px)}}
+@media(max-width:600px){.hero h1{font-size:3.8rem}.counter-center span{font-size:4rem}.section{padding:80px 18px}.letter{padding:48px 25px}}
+
+#love-song{display:none}
+.music-toggle{position:fixed;right:22px;bottom:22px;z-index:100;width:auto;margin:0;padding:10px 15px;background:rgba(20,8,14,.72);backdrop-filter:blur(12px);border-color:rgba(255,190,205,.28);font-size:.7rem;opacity:.8}
+.music-toggle span{font-size:.58rem;letter-spacing:.12em}
+.music-toggle.playing{box-shadow:0 0 22px rgba(235,100,140,.18);opacity:1}
+@media(max-width:600px){.music-toggle{right:14px;bottom:14px}}
